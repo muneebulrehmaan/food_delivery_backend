@@ -1,0 +1,6 @@
+Instructions: If you wana run the code locally.
+
+1. Create a database named "fooddelivery".
+2. insert queries mentioned in "query.sql".
+
+

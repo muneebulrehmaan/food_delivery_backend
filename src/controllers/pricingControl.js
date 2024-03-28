@@ -7,7 +7,7 @@ async function calculatePrice(req, res) {
         const { total_price } = await PriceCalculator.calculatePrice({ zone, organization_id, total_distance, item_type });
         
       
-        res.json({ total_price });
+        res.json({total_price});
     } catch (error) {
         console.error('Error calculating price in pricing controller:', error);
         
