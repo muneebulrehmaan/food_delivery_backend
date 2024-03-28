@@ -5,10 +5,9 @@ const Item = sequelize.define('Item', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
   },
   type: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM('perishable','non-perishable'),
     allowNull: false
   },
   description: {

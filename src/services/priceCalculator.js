@@ -6,7 +6,7 @@ async function calculatePrice({ zone, organization_id, total_distance, item_type
             where: { organization_id, zone }
             
         });
-        //console.log('pricing model =', pricing);
+       
 
         if (!pricing) {
             throw new Error(`Pricing information not found for zone: ${zone} and organization_id: ${organization_id}`);
@@ -16,7 +16,7 @@ async function calculatePrice({ zone, organization_id, total_distance, item_type
        /// console.log(typeof total_price)
         if (total_distance > pricing.base_distance_in_km) {
             const additional_distance = total_distance - pricing.base_distance_in_km;
-            console.log(typeof additional_distance);
+          
             const km_price = item_type === 'perishable'
                 ? 1.5
                 : 1;
